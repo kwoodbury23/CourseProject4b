@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreferencesActivity"
+    tools:ignore="ExtraText">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="95dp"
+        android:layout_height="729dp"
+        android:background="#E10707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="75dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:onClick="goToMain"
+            android:text="Main"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Game"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="125dp"
+            android:minWidth="48dp"
+            android:onClick="goToGame"
+            android:text="Game"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/Preferences"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="175dp"
+            android:onClick="goToPreferences"
+            android:text="Preferences"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="225dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:onClick="goToHelp"
+            android:text="Help"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+
+    </FrameLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="231dp"
+        android:layout_height="259dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212">
+
+        <TextView
+            android:id="@+id/easyText"
+            android:layout_width="145dp"
+            android:layout_height="29dp"
+            android:layout_marginBottom="10dp"
+            android:text="Numbers 1-25"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/easyB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeDifficulty"
+            android:text="Easy" />
+
+        <TextView
+            android:id="@+id/normalText"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Numbers 1-50"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/normalB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeDifficulty"
+            android:text="Normal" />
+
+        <TextView
+            android:id="@+id/hardText"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Numbers 1-100"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/hardB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeDifficulty"
+            android:text="Hard" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/experienceText"
+        android:layout_width="248dp"
+        android:layout_height="53dp"
+        android:gravity="center"
+        android:text="User Experience"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.709" />
+
+    <TextView
+        android:id="@+id/difficultyText"
+        android:layout_width="231dp"
+        android:layout_height="58dp"
+        android:gravity="center"
+        android:text="Game Difficulty"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <TextView
+        android:id="@+id/expereinceLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beginner's level: 100 and under wins"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.782" />
+
+    <TextView
+        android:id="@+id/expereinceLevel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expert level: 1,000 and up wins"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932" />
+
+    <TextView
+        android:id="@+id/expereinceLevel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Advanced level: 101 - 999 wins"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.858" />
+
+    <Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="saveChanges"
+        android:text="Save Changes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.598" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
